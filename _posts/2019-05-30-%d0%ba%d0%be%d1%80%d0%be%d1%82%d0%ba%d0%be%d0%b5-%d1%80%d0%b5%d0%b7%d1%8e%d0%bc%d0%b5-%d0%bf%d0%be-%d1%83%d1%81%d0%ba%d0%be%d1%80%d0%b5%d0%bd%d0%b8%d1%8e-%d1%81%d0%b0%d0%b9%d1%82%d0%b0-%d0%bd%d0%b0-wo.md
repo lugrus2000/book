@@ -1,0 +1,667 @@
+---
+ID: 18
+post_title: >
+  Короткое резюме по
+  ускорению сайта на
+  WordPress
+author: admin
+post_date: 2019-05-30 22:38:18
+post_excerpt: ""
+layout: post
+permalink: 'http://lugrus.ml/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/%d0%ba%d0%be%d1%80%d0%be%d1%82%d0%ba%d0%be%d0%b5-%d1%80%d0%b5%d0%b7%d1%8e%d0%bc%d0%b5-%d0%bf%d0%be-%d1%83%d1%81%d0%ba%d0%be%d1%80%d0%b5%d0%bd%d0%b8%d1%8e-%d1%81%d0%b0%d0%b9%d1%82%d0%b0-%d0%bd%d0%b0-wo.html'
+published: true
+mtc_review_is_enable:
+  - "0"
+kopa_Newsmaxx_total_view:
+  - "3"
+kopa_user_post_rate_Newsmaxx:
+  - 'a:1:{i:0;a:2:{s:10:"rate_value";s:1:"5";s:9:"client_ip";s:9:"127.0.0.1";}}'
+kopa_user_total_rate_Newsmaxx:
+  - "5"
+kopa_user_total_percent_rate_Newsmaxx:
+  - "5"
+wp_markup_collection_meta_filter:
+  - phpmarkdown --extra
+post_views_count:
+  - "1"
+---
+<pre class='wp-markup-collection'>
+Основное влияние на скорость оказали такие факторы как смена хостинга с использованием SSD дисков, оптимизация изображений, включение плагина кеширования W3 Total Cache, оптимизация БД сайта, удаление старых ревизий, включение сжатия файлов на стороне сервера, включение кеша для статичных файлов на стороне браузера. Далее следует полная развернутая инструкция по ускорению сайта на WordPress.
+
+## Полная инструкция как ускорить сайт на WordPress
+
+### 1. Качественный SSD хостинг, быстрый пинг
+
+Хостинг должен быть на SSD дисках. Желательно чтобы сервера хостинга располагались в вашей географической зоне, на которую ориентирован сайт. Если хостинг будет на SSD, но в США, а ваш блог ориентирован на Россию и страны СНГ, то толку от такого SSD будет мало. Так как будет идти долгий пинг для связи с сервером. Поэтому месторасположение дата центра хостинга также важно. Это важный параметр хостинга — быстрый пинг, отклик серверов. И чтобы хостер не делал оверселлинг услуг. Про тип хостинга — конечно лучше брать как VDS (виртуальный выделенный сервер) с необходимыми для вашего сайта параметрами, вместо обычного shared хостинга. Какую именно конфигурацию VDS выбрать — это зависит от нагрузки которую ваш сайт создает не сервер и от размера его суточной аудитории. Я бы советовал брать минимум 1Gb Ram, 1 ядро процессора и 10 Гб SSD. В начале у меня был VDS на обычных HDD дисках, затем я поменял его на SSD VDS хостинг.
+
+#### Хостинг «До»:
+
+**VPS хостинг FreeHost.com.ua**
+Размер диска: 30 Gb HDD
+Память: 2 Gb RAM
+Частота CPU: 2,2 Ghz
+Количество CPU: 1
+Расположение серверов: Киев, Украина
+Стоимость: 12,8 $/месяц
+
+#### Хостинг «После»:
+
+**VDS хостинг от ihor.ru**
+Размер диска: 20 Gb HDD
+Память: 1 Gb RAM
+Частота CPU: 2,4 Ghz
+Количество CPU: 1
+Расположение серверов: Москва, Россия
+Стоимость: 250 руб/месяц (примерно 5$/месяц)
+
+По скриншотам теста скорости загрузки сайта, видно что на старом хостинге время ответа сайта достигало 12,3 секунды. Что непомерно много. На новом хостинге от ihor.ru время ответа сайта составляло 1,2 секунды, что в разы быстрее, по сравнению со старым хостингом. На этот показатель повлияли SSD диски, и более лучший дата центр с лучшим и более быстрым каналом.
+
+**Смена хостинга является одной из главных причин ускорения работы сайта.**
+
+### 2. Оптимизировать изображения
+
+Проверьте используете ли вы оптимизированные jpg файлы изображений. Которые занимают небольшой размер и при этом обладают хорошим качеством. В Photoshop сохранять такие изображения можно командой Save for Web (Ctrl + Shift + Alt + S), или через функцию export assets если вы используете Photoshop CC. Не стоит сохранят большие непрозрачные картинки в .png формате, он занимает слишком много места, и для этого лучше использовать jpeg формат. Формат png подходит для небольшой графики которая используется в оформлении сайта, в шаблоне, это могут быть изображения кнопок, буллеты, изображения с прозрачным фоном.
+
+Некоторые миниатюры к записям у меня были сохранены в .png формате, и размер изображения достигал 300 Кб. Пересохранив изображения в jpg формат, каждая миниатюра стала занимать 60-90 Кб в среднем. Таким образом вес некоторых изображений уменьшился в 3-4 раза, без потери качества.
+
+Существует специальный плагин для оптимизации изображений – [WP Smush](https://wordpress.org/plugins/wp-smushit/). Признаюсь — я ним не пользуюсь, так как сам перед публикацией оптимизирую все изображения на предмет размера и качества. Но если вы хотите автоматизировать процесс — то используйте этот плагин.
+
+### 3. Настройка wp-config.php для ускорения работы сайта на wordpress
+
+Небольшой способ снизить загрузку на хостинг — отредактировать файл wp-config.php, который находится в коревой директории вашего сайта.
+
+Находим в файле wp-config.php строку:
+
+```
+define ('WPLANG', 'ru_RU');
+```
+
+Заменяем на:
+
+```
+if (strpos($_SERVER['REQUEST_URI'], 'wp-admin')) define ('WPLANG', 'ru_RU'); else define ('WPLANG', 'ru_RU_lite');
+```
+
+Данное решение позволит сократить количество загружаемых языковых настроек только на нужные, в стандартном коде, WordPress загружает много ненужных параметров.
+
+### 4. Настройка Robots.txt — запрет на индексацию ненужным сайтам.
+
+Файл robots.txt регулирует доступ различных поисковых роботов к страницам сайта. Предлагаю добавить следующие строки в файл, сразу же перед директивой Host. Сделаем мы это для того чтобы запретить на сайт вход различным поисковым роботам, грабберам и парсерам, которые могут воровать контент и создавать ненужную нагрузку на хостинг.
+
+Например, помимо роботов от Yandex и Google на сайт также заходит поисковый робот от поисковика Yahoo. Таким кодом можно запретить Yahoo роботу просматривать сайт:
+
+```
+User-agent: Slurp
+Disallow: /
+```
+
+Я прописал следующие запрещающие директивы:
+
+[json]
+User-agent: grub-client
+Disallow: /
+
+User-agent: grub
+Disallow: /
+
+User-agent: looksmart
+Disallow: /
+
+User-agent: WebZip
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: b2w/0.1
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: NetMechanic
+Disallow: /
+
+User-agent: URL_Spider_Pro
+Disallow: /
+
+User-agent: CherryPicker
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: Crescent
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: ProWebWalker
+Disallow: /
+
+User-agent: CheeseBot
+Disallow: /
+
+User-agent: LNSpiderguy
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: ia_archiver/1.6
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: MIIxpc
+Disallow: /
+
+User-agent: Telesoft
+Disallow: /
+
+User-agent: Website Quester
+Disallow: /
+
+User-agent: moget/2.1
+Disallow: /
+
+User-agent: WebZip/4.0
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebSauger
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: NetAnts
+Disallow: /
+
+User-agent: Mister PiX
+Disallow: /
+
+User-agent: WebAuto
+Disallow: /
+
+User-agent: TheNomad
+Disallow: /
+
+User-agent: WWW-Collector-E
+Disallow: /
+
+User-agent: RMA
+Disallow: /
+
+User-agent: libWeb/clsHTTP
+Disallow: /
+
+User-agent: asterias
+Disallow: /
+
+User-agent: httplib
+Disallow: /
+
+User-agent: turingos
+Disallow: /
+
+User-agent: spanner
+Disallow: /
+
+User-agent: InfoNaviRobot
+Disallow: /
+
+User-agent: Harvest/1.5
+Disallow: /
+
+User-agent: Bullseye/1.0
+Disallow: /
+
+User-agent: Mozilla/4.0 (compatible; BullsEye; Windows 95)
+Disallow: /
+
+User-agent: Crescent Internet ToolPak HTTP OLE Control v.1.0
+Disallow: /
+
+User-agent: CherryPickerSE/1.0
+Disallow: /
+
+User-agent: CherryPickerElite/1.0
+Disallow: /
+
+User-agent: WebBandit/3.50
+Disallow: /
+
+User-agent: NICErsPRO
+Disallow: /
+
+User-agent: Microsoft URL Control - 5.01.4511
+Disallow: /
+
+User-agent: DittoSpyder
+Disallow: /
+
+User-agent: Foobot
+Disallow: /
+
+User-agent: WebmasterWorldForumBot
+Disallow: /
+
+User-agent: SpankBot
+Disallow: /
+
+User-agent: BotALot
+Disallow: /
+
+User-agent: lwp-trivial/1.34
+Disallow: /
+
+User-agent: lwp-trivial
+Disallow: /
+
+User-agent: BunnySlippers
+Disallow: /
+
+User-agent: Microsoft URL Control - 6.00.8169
+Disallow: /
+
+User-agent: URLy Warning
+Disallow: /
+
+User-agent: Wget/1.6
+Disallow: /
+
+User-agent: Wget/1.5.3
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: LinkWalker
+Disallow: /
+
+User-agent: cosmos
+Disallow: /
+
+User-agent: moget
+Disallow: /
+
+User-agent: hloader
+Disallow: /
+
+User-agent: humanlinks
+Disallow: /
+
+User-agent: LinkextractorPro
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Mata Hari
+Disallow: /
+
+User-agent: LexiBot
+Disallow: /
+
+User-agent: Web Image Collector
+Disallow: /
+
+User-agent: The Intraformant
+Disallow: /
+
+User-agent: True_Robot/1.0
+Disallow: /
+
+User-agent: True_Robot
+Disallow: /
+
+User-agent: BlowFish/1.0
+Disallow: /
+
+User-agent: JennyBot
+Disallow: /
+
+User-agent: MIIxpc/4.2
+Disallow: /
+
+User-agent: BuiltBotTough
+Disallow: /
+
+User-agent: ProPowerBot/2.14
+Disallow: /
+
+User-agent: BackDoorBot/1.0
+Disallow: /
+
+User-agent: toCrawl/UrlDispatcher
+Disallow: /
+
+User-agent: WebEnhancer
+Disallow: /
+
+User-agent: suzuran
+Disallow: /
+
+User-agent: VCI WebViewer VCI WebViewer Win32
+Disallow: /
+
+User-agent: VCI
+Disallow: /
+
+User-agent: Szukacz/1.4
+Disallow: /
+
+User-agent: QueryN Metasearch
+Disallow: /
+
+User-agent: Openfind data gathere
+Disallow: /
+
+User-agent: Openfind
+Disallow: /
+
+User-agent: Xenu's Link Sleuth 1.1c
+Disallow: /
+
+User-agent: Xenu's
+Disallow: /
+
+User-agent: Zeus
+Disallow: /
+
+User-agent: RepoMonkey Bait &amp;amp; Tackle/v1.01
+Disallow: /
+
+User-agent: RepoMonkey
+Disallow: /
+
+User-agent: Microsoft URL Control
+Disallow: /
+
+User-agent: Openbot
+Disallow: /
+
+User-agent: URL Control
+Disallow: /
+
+User-agent: Zeus Link Scout
+Disallow: /
+
+User-agent: Zeus 32297 Webster Pro V2.9 Win32
+Disallow: /
+
+User-agent: Webster Pro
+Disallow: /
+
+User-agent: EroCrawler
+Disallow: /
+
+User-agent: LinkScan/8.1a Unix
+Disallow: /
+
+User-agent: Keyword Density/0.9
+Disallow: /
+
+User-agent: Kenjin Spider
+Disallow: /
+
+User-agent: Iron33/1.0.2
+Disallow: /
+
+User-agent: Bookmark search tool
+Disallow: /
+
+User-agent: GetRight/4.2
+Disallow: /
+
+User-agent: FairAd Client
+Disallow: /
+
+User-agent: Gaisbot
+Disallow: /
+
+User-agent: Aqua_Products
+Disallow: /
+
+User-agent: Radiation Retriever 1.1
+Disallow: /
+
+User-agent: Flaming AttackBot
+Disallow: /
+
+User-agent: Oracle Ultra Search
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: PerMan
+Disallow: /
+
+User-agent: searchpreview
+Disallow: /
+[/json]
+
+Вот пример моего файла [robots.txt](http://rightblog.ru/robots.txt)
+
+Запретив индексацию сайта этим способом, вы сможете снизить нагрузку на хостинг, следовательно ускорить загрузку сайта, высвободив ресурсы сервера.
+
+### 5. Настройка файла .htaccess для снижения нагрузки на сервер.
+
+В файле .htaccess — задаются дополнительные команды для хостинга.С помощью специальных настроек можно убрать лишнюб нагрузку на сервер, и ускорить работу сайта.
+
+**Настройка №1.** Часто с сайтов копируют информацию вместе с картинками, не изменяя адреса картинок. И когда такое происходит картинки лежащие на нашем хостинге загружаются на других сайтах, и это создает ненужную нагрузку на хостинг.
+
+Следующим кодом можно запретить загружать изображения нашего сайта на сторонних сайтах:
+
+
+[html]
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?yandex.ru/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?undsoft.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?yandex.net/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?feedburner.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?mail.ru/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?poisk.ru/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(.+.)?yourdomain.ru/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^$ [NC]
+RewriteRule .*.(jpe?g|gif|bmp|png)$ - [F]
+[/html]
+
+
+После добавления этого кода, на чужом сайте вместо вашего изображения будет выходить ошибка.
+
+**Настройка №2.** В файле .htaccess можно и следует указать кэширование для некоторых объектов сайта (изображений, css и js фалов) чтобы браузер кешировал их на своей стороне и не загружал их каждый раз. Для этого в .htaccess ниже первого кода добавляем следующий код:
+
+```
+FileETag MTime Size
+
+&amp;lt;filesmatch &quot;.(jpg|gif|png|css|js)$&quot;&amp;gt;
+ExpiresActive on
+ExpiresDefault &quot;access plus 1 year&quot;
+
+
+```
+
+**Настройка №3.** Включим gzip сжатие страниц перед отправкой их пользователю. Вставим в .htaccess следующий код:
+
+```
+
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file .(html?|txt|css|js|php)$
+mod_gzip_item_include handler ^cgi-script$
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+
+```
+
+**Настройка №4.** Ограничение спама в комментариях. Большинство спам комментариев отправляются автоматически. Этим кодом мы запретим напрямую отсылать комментарии минуя форму комментирования. Теперь спам боты не смогу отправлять комментарии.
+
+```
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{REQUEST_URI} .wp-comments-post.php*
+RewriteCond %{HTTP_REFERER} !.*yourdomain.ru.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule (.*) ^http://%{REMOTE_ADDR}/$ [R=301,L]
+```
+
+**Настройка №5.** Если вы пользуетесь системой FeedBurner, то у вас явно установлены плагины, которые отправляют RSS-контент на сайт FeedBurner. Сегодня вы можете их удалить, потому что перенаправить контент можно и без плагинов, уменьшив нагрузку на хостинг.
+
+```
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner [NC]
+RewriteCond %{HTTP_USER_AGENT} !FeedValidator [NC]
+RewriteRule ^feed/?([_0-9a-z-]+)?/?$ http://yourdomain.ru [R=302,NC,L]
+```
+
+**ВНИМАНИЕ!!!** Не забудьте в примерах выше заменить адрес yourdomain.ru на адрес своего сайта.
+
+### 6. Оптимизация базы данных
+
+Важное значение в скорости работы сайта имеет База Данных. При сохранении постов по нескольку раз WordPress создает ревизии записи — состояния постов в разные моменты их редактирования. В результате со временем база данных содержит большое количество ненужных ревизий постов, и их необходимо очищать и оптимизировать. Сделать это можно с помощью **плагина Optimize DB**. Установить его можно из админки WordPress. Например запустив его на своем сайте я удалили более 1200 ревизий постов. Что значительно улучшило скорость работы БД.
+
+### 7. Оптимизация кода шаблона (темы)
+
+Оптимизация кода темы заключается в том чтобы убрать ненужные запросы и/или заменить их на конкретные значения, например название блога.
+
+**Настройка №1.** Найти код, который отвечает за стили в файле header.php:
+
+```
+
+```
+
+Заменить на:
+
+```
+```
+
+Внимание!!! Не забудьте изменить yoursite.ru на ссылку своего сайта.
+
+**Настройка №2.** Изменить код пинбеков:
+
+```
+
+```
+
+Заменить с исправлением yoursite.ru на свою ссылку:
+
+```
+```
+
+**Настройка №3.** Изменение кода RSS ленты:
+
+```
+
+```
+
+Заменить с исправлением yoursite.ru на свою ссылку:
+
+```
+```
+
+**Настройка №4.** Довольно часто в подвале сайта (footer.php), разработчики тем оставляют совершенно ненужные запросы к Базе данных. Например:
+
+```
+&lt;!--?php get_bloginfo('name') ?--&gt;
+```
+
+Данный код просто отображает название сайта, что бы лишний раз не обращаться к базе данных разумнее своими руками один раз написать название и не нагружать сайт. Этот же код можно поискать и в других разделах сайта, но прежде чем удалять, подумайте.
+
+#### Некоторые маленькие советы, которые позволят ускорить загрузку сайта:
+
+1) Если ваш сайт не использует комментарии, не стоит их скрывать с помощью плагинов, это создает совершенно ненужную нагрузку. Так как вам комментарии совершенно не нужны, просто удалите следующий код из файла темы (single.php):
+
+```
+&lt;!--?php comments_template(); ?--&gt;
+```
+
+2) Старайтесь не использовать внешние скрипты, такие как, комментарии от Вконтакте, различные виджеты социальных сетей. Да, это выглядит красиво и эффектно, но создает приличную нагрузку на сайт. Из примеров могу сказать что мой сайт значительно грузил код веб-визора от ЯндексМетрики, виджет Add.This. Кнопки соц сетей я поменял на отельный JS плагин.
+
+3) Почистите весь код вашего сайта от комментариев, данные комментарии вставляются с помощью тегов &amp;lt;!-код-&amp;gt; и /*код/. Оставьте только нужное, так как сайту приходится тратить лишние силы на их загрузку…
+
+4) Старайтесь размещать все скрипты в конце страницы перед закрвающим тегом , чтобы сперва загружался основной сайт, а уже потом загружались скрипты.
+
+5) Все дополнительные коды на подобии счетчика сайта от Live Internet, либо Google Analytics стоит размещать в подвале сайта, что бы они так же как и другие скрипты грузились только в самую последнюю очередь.
+
+### 8. WordPress плагины — для ускорения скорости загрузки сайта
+
+Несколько советов по работе с плагинами, чтобы оптимизировать их нагрузку на сайт.
+
+**1) Удалите ненужные плагины. Ненужные плагин** Со временем работающие плагины накапливаются, и можно насобирать много ненужных пагинов которые помимо занимаемого места будут создавать ненужную нагрузку на сайт.
+
+**2) Деактивируйте ненужные плагины.** Постарайтесь использовать как можно меньше Активированных плагинов. Некоторым плагинам не обязательно давать работать постоянно.Например плагин для оптимизации БД можно включать только на период работы с ним.
+
+### 10. Ускорение сайта с помощью кэширования
+
+Кэширование — от слова кэш, то есть сохранение определенных данных, которые следует постоянно загружать. То есть сайт сохраняет определенные данные, и при переходе на страницу, браузер пользователя просто скачивает сохраненные данные в виде страницы. Сайту не приходится обращаться к серверу и базе данных, потом ждать отклика, собирать нужную информацию и отдавать их монитору вашего читателя.
+
+**1) WP Super Cache** – лучший и бесплатный плагин для кэширования в WordPress. Рекомендую его установить и использовать. Также хорошие плагины WP Total Cache, WP Rocket.
+
+**2) Плагин Autoptimize** – рекомендуют использовать вместе с Wp Super Cache. Никаких сверх настроек делать не нужно, просто активируйте плагин, в разделе «Настойки» → «Autoptimize» поставьте галочки, и плагин будет работать. Будьте осторожны, проверьте работоспособность сайта после изменения настроек, что бы предостеречь себя от неприятностей.
+
+**3) Плагин WP Widget Cache** – позволяет кэшировать виджеты, с чем не справляется плагин Wp Super Cache.
+
+### 11. Используйте CDN сети для более быстрой загрузки контента
+
+Еще один способ ускорить загрузку сайта — использовать CDN сети, Content Delivery Networks. Каждый раз когда пользователь открывает ваш сайт, он загружает всю информацию с вашего сервера, на котором расположен сайт. Если регион пользователя и регион расположения сервера с вашим сайтом одинаковы, скажем Москва Россия — то все олично. Но если пользователь заходит на Ваш сайт скажем с Азии, или США, то доставка контента к нему уже будет происходить с меньшей скоостью, т.к. тут влияет расстояние. Использование CDN сетей дает возможность загружать файлы вашего сайта (изображения, скрипты, стили) не только с вашего хостинга, а с дата-центров по всему миру. Таким образом заходя на сайт, пользователь автоматически загрузит файлы сайта из наиболее близкой для него точки с серверами CDN сети, что значительно ускорит загрузку сайта.
+
+Можно исюпользовать плагин [Jetpack Photon](http://wordpress.org/plugins/jetpack/) который дает возможность использовать CDN сеть WordPress для загрузки изображений вашего сайта.
+
+Можно использовать другие CDN сети, например MaxCDN, NGENIX или Amazon CloudFront. Я CDN сети не использовал, поэтому в этом пункте ограничися лишь кратким ознакомительным описанием этой технологии.
+
+Подключая свой сайт к CDN сети, все файлы сайта будут загружаться с мощнейших дата-центров по всей планете. Обычно такие услуги платные, стоимость начинается от 9$, и используют их очень популярные сайты с огромной посещаемостью.
+
+### Несколько мелочей, которые в также помогут вам ускорить загрузку сайта:
+
+1. На главной странице сайта выводите только [анонсы статей](http://wpmen.ru/kak-raskrutit-sajt-s-0-do-300.html), не нужно выводить полные статьи.
+2. Очень большие статьи разделяйте на страницы с помощью тега &amp;lt;!-nextpage-&amp;gt;.
+3. Не стоит выводить на главной странице больше 5-6 статей.
+4. Не стоит выводить под статьей больше 50 комментариев, пользуйтесь так же переключением страниц между комментариями.
+5. Установите поиск по сайту от Google или Yandex. Сайт будет искать информацию быстрее.
+
+На этом у меня все дорогие друзья, спасибо за ваше огромное терпение, надеюсь вам понравилось, до скорых встреч.
+
+#### Ресурсы по теме:
+
+[3 самых популярных способа включить сжатие на WordPress сайтах](http://softstribe.com/wordpress/enable-gzip-compression-in-wordpress)
+
+[Рекомендации по прохождению теста от Google PageSpeed Test](https://premium.wpmudev.org/blog/why-trying-to-get-95-on-google-pagespeed-insights-will-drive-you-mad/?dsh=1&amp;amp;utm_expid=3606929-40.lszTaIEzTbifDhvhVdd39A.1&amp;amp;utm_referrer=https%3A%2F%2Fpremium.wpmudev.org%2Fblog%2Ftop-wordpress-caching-plugins%2F%3Fdsh%3D1)
+
+[Топ 3 лучших плагина для кэширования в WordPress](https://premium.wpmudev.org/blog/top-wordpress-caching-plugins/?dsh=1&amp;amp;utm_expid=3606929-40.lszTaIEzTbifDhvhVdd39A.1&amp;amp;utm_referrer=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D3%26ved%3D0CDEQFjAC%26url%3Dhttps%3A%2F%2Fpremium.wpmudev.org%2Fblog%2Ftop-wordpress-caching-plugins%2F%26ei%3DDzKRVdXBMsexsAHn3bqQDA%26usg%3DAFQjCNEgZ9mZIiW5_6LQjVVKR0EGWWpt-w%26sig2%3DPDjQHyGOOESPXSrB6vtHlg%26bvm%3Dbv.96783405%2Cd.bGg%26cad%3Drja)
+
+[Тестирование лучших кэш плагинов для WordPress](https://premium.wpmudev.org/blog/best-wordpress-caching-plugins/?dsh=1&amp;amp;utm_expid=3606929-40.lszTaIEzTbifDhvhVdd39A.1&amp;amp;utm_referrer=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D2%26ved%3D0CCgQFjAB%26url%3Dhttps%3A%2F%2Fpremium.wpmudev.org%2Fblog%2Fbest-wordpress-caching-plugins%2F%26ei%3DDzKRVdXBMsexsAHn3bqQDA%26usg%3DAFQjCNHEHL4MZVJgVx35wW6NBSGciN1K1w%26sig2%3Dm8Xaxtrff5pVdFIpqYwWxA%26bvm%3Dbv.96783405%2Cd.bGg%26cad%3Drja)
+
+[Бенчмарк лучших WordPress cache плагинов](http://wpdevshed.com/best-wordpress-cache-plugin/#about)
+
+[11 Способов ускорить загрузку сайта на WordPress](http://wpmen.ru/11-sposobov-uskorit-zagruzku-wordpress-sajta.html)
+</pre>
