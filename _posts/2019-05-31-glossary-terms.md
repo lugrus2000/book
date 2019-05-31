@@ -1,14 +1,15 @@
 ---
 ID: 42
 post_title: glossary-terms
+post_name: glossary-terms
 author: admin
 post_date: 2019-05-31 14:56:04
-post_excerpt: ""
 layout: post
-permalink: http://lugrus.ml/wp/glossary-terms.html
+link: http://lugrus.ml/wp/glossary-terms.html
 published: true
-wp_markup_collection_meta_filter:
-  - phpmarkdown --extra
+tags: [ ]
+categories:
+  - wordpress
 ---
 <pre class='wp-markup-collection'>
 === Glossary ===
