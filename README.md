@@ -1,7 +1,5 @@
-wpveda book
+Lugrus Book
 ===========
-
-[![Build Status](https://travis-ci.org/wpveda/book.svg?branch=master)](https://travis-ci.org/wpveda/book)
 
 **Status:** Just started. Far away from "ready to use".
 
@@ -27,4 +25,4 @@ Based on current status, it's better to list goals of this book.
 Like to Contribute?
 ===================
 
-Please check - [Contributors guideline](https://github.com/wpveda/book/blob/master/CONTRIBUTING.md)
+Please check - [Contributors guideline](https://github.com/lugrus2000/book/blob/master/CONTRIBUTING.md)
