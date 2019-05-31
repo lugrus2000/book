@@ -5,6 +5,6 @@ author: admin
 post_date: 2019-05-31 14:58:34
 post_excerpt: ""
 layout: page
-permalink: http://lugrus.ml/glossary-2
+permalink: http://lugrus.ml/glossary
 published: true
 ---
