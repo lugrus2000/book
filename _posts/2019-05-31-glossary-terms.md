@@ -7,7 +7,10 @@ post_excerpt: ""
 layout: post
 permalink: http://lugrus.ml/wp/glossary-terms.html
 published: true
+wp_markup_collection_meta_filter:
+  - phpmarkdown --extra
 ---
+<pre class='wp-markup-collection'>
 === Glossary ===
 Contributors: codeat, iGenius, mte90
 Donate link: http://codeat.com/
@@ -19,7 +22,7 @@ Stable tag: 1.7.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Improve your UX &amp; SEO with Codeat's Glossary: a powerful auto-link engine; customizable styled tooltips, mobile settings, and much more!
+Improve your UX &amp;amp; SEO with Codeat's Glossary: a powerful auto-link engine; customizable styled tooltips, mobile settings, and much more!
 
 == Description ==
 
@@ -59,7 +62,7 @@ Ninja Forms, Yoast SEO, Elementor (not pro version), role management plugins (i.
 * Gutenberg support out the box
 * Codeat's Glossary for WordPress Free version does not include dedicated support. If you need help, head over to the WordPress support forum at https://wordpress.org/support/plugin/glossary-by-codeat.
 
-&gt; Take a look at our [DEMO SITE](https://codeat.co/glossary) or read the [DOCUMENTATION](https://codeat.co/glossary/documentation/)
+&amp;gt; Take a look at our [DEMO SITE](https://codeat.co/glossary) or read the [DOCUMENTATION](https://codeat.co/glossary/documentation/)
 
 The PRO version tops all the fantastic features of Codeat Glossary Free with a set of useful extras that extend styling and customization opportunities. Let’s see them all in detail:
 
@@ -86,7 +89,7 @@ But that’s just the beginning, here are some extra PRO features we’re sure y
 * The ability to add Custom Fields to your key terms, and the integration with the ACF Custom Fields plugin
 * Codeat’s Glossary for WordPress PRO version includes dedicated support. Any question or doubt will be addressed directly and rapidly by Codeat’s support team.
 
-&gt; Take a look at our [DEMO SITE](https://codeat.co/glossary) or read the [DOCUMENTATION](https://codeat.co/glossary/documentation/)
+&amp;gt; Take a look at our [DEMO SITE](https://codeat.co/glossary) or read the [DOCUMENTATION](https://codeat.co/glossary/documentation/)
 
 == Installation ==
 
@@ -287,7 +290,7 @@ different texts
 * [PRO] Fix: Better printing on `glossary-list` index of non-latin characters
 
 == 1.6.3 ==
-* [PRO] Enhancement: Settings to change the "more" text in tooltips
+* [PRO] Enhancement: Settings to change the &quot;more&quot; text in tooltips
 
 == 1.6.2 ==
 * Enhancement: On AMP pages force the link mode
@@ -410,7 +413,7 @@ different texts
 = 1.3.6 =
 * Improvement: New unit test systems
 * Improvement: Reminder to flush the permalink
-* [PRO] Feature: Support for ACF 4 &amp; 5 versions
+* [PRO] Feature: Support for ACF 4 &amp;amp; 5 versions
 * [PRO] Feature: Support for excerpt in terms
 * [PRO] Feature: Widget for search terms
 
@@ -513,8 +516,8 @@ different texts
 * Search support as option
 * Option to change the slugs
 * Option to disable archive
-* [glossary-terms order="desc" num="20" tax="sport"] new shortcode
-* [glossary-cats order="desc" num="20"] new shortcode
+* [glossary-terms order=&quot;desc&quot; num=&quot;20&quot; tax=&quot;sport&quot;] new shortcode
+* [glossary-cats order=&quot;desc&quot; num=&quot;20&quot;] new shortcode
 * New option for filter by taxonomy in Last Glossary Terms widget
 * Choice between the external url or a internal post type for the term
 * Code improvements
@@ -551,3 +554,4 @@ different texts
 
 = 1.0 =
 * Published on WordPress repo
+</pre>
